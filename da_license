@@ -1,0 +1,8 @@
+#!/bin/sh
+rm -rf /usr/local/directadmin/conf/license.key;
+/usr/bin/wget -O /usr/local/directadmin/conf/license.key https://github.com/minhvinhdao/Active-Direct-Admin-/raw/main/license.key;
+chmod 600 /usr/local/directadmin/conf/license.key;
+chown diradmin:diradmin /usr/local/directadmin/conf/license.key;
+systemctl restart directadmin
+
+
